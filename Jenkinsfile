@@ -8,5 +8,10 @@ pipeline {
                 sh 'go test'
             }
         }
+        stage('Benchmark') {
+            steps {
+                sh 'go test -bench .'
+            }
+        }
     }
 }
